@@ -1,0 +1,113 @@
+.BestSellingBook {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-2);
+  /* Add padding or margin as needed */
+}
+
+.treeShape{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+}
+
+/* Container holding each book item */
+.bestselling-container {
+  width: 74% !important;
+  display: grid;
+  grid-template-columns: 38% auto; /* Image + details */
+  gap: 100px;
+  align-items: center;
+  
+  position: relative;
+ 
+}
+
+/* Title inside the selling book */
+.sellingBookTitle {
+  margin-bottom: 50px;
+  /* Add font styling if needed */
+}
+
+/* Left side - book image */
+.selling-book-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Right side - book details */
+.selling-book-right {
+ position: relative;
+ z-index: 1;
+}
+
+.selling-book-right > div small {
+  text-transform: uppercase;
+}
+.selling-book-right h3 {
+   margin-top: 30px;
+  margin-bottom: 12px;
+}
+/* Price section */
+.selling-book-right h5 {
+  margin-top: 35px;
+  margin-bottom: 40px;
+ 
+}
+
+.selling-book-right .btn {
+  padding-left: 0;
+}
+
+/* Hover effect on button */
+.selling-book-right .btn:hover {
+  padding-left: 35px;
+}
+
+/* Hover effect on small text inside the button */
+.selling-book-right .btn:hover small {
+  color: var(--color-bg-1) !important;
+  transition: color 0.3s ease;
+}
+@media (max-width: 1200px) {
+  .bestselling-container {
+    gap: 80px;
+    width: 86% !important;
+  }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .bestselling-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .selling-book-left {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .selling-book-right {
+    text-align: center;
+  }
+
+  .selling-book-right .btn {
+    margin: auto;
+    padding-left: 35px;
+  }
+}
+@media (max-width: 600px) {
+  .bestselling-container {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  .selling-book-left {
+    width: 60%;
+    margin: 0 auto;
+  }
+}

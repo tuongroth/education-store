@@ -1,0 +1,38 @@
+.titleTypeOne {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Heading container with lines and title */
+.heading-H h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.heading-H {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+
+.victor{
+  margin: 0 auto;
+  width: 46px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heading-H {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading-H {
+    gap: 20px;
+  }
+}

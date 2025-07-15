@@ -1,0 +1,79 @@
+.latest-article-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 56px;
+}
+
+.article-image {
+  margin-bottom: 30px;
+ 
+}
+
+.article-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 26px;
+}
+
+
+.article-info h5 {
+  color: var(--color-primary);
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+
+.latest-article-social {
+  display: flex;
+  align-items: center; /* canh giữa theo chiều dọc */
+  justify-content: space-between; /* hoặc space-around, tùy ý */
+  gap: 20px; /* khoảng cách giữa p và div */
+}
+
+
+.latest-article-socials p {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.article-social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.article-social a {
+  font-size: 15px;
+  color: var(--color-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.article-social a:hover {
+  color: var(--color-primary);
+}
+
+.latest-container .btn {
+  margin: auto;
+  margin-top: 66px;
+  display: block; /* để margin auto có tác dụng */
+  width: fit-content; }
+
+  @media (max-width: 1024px) {
+  .latest-article-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Mobile View - max width 600px */
+@media (max-width: 600px) {
+  .latest-article-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}

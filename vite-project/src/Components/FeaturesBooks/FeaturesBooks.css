@@ -1,0 +1,64 @@
+
+/* Feature Book Container */
+.features-book-container {
+  position: relative;
+}
+
+/* Feature Book Box */
+.featurebook-box {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+  
+}
+.featurebook{
+ background: var(--color-light);
+}
+
+/* Feature Book Info */
+.featurebook-info {
+  margin-top: 16px;
+}
+.featurebook-info h5 {
+  margin: 10px 0 5px;
+  color: var(--primary-color);
+}
+.featurebook-info > div {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Swiper Pagination Position */
+.features-book-container .swiper-pagination {
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Feature Border */
+.feature-border {
+  margin-top: 56px;
+  height: 1px;
+  background: #333;
+  width: 100%;
+}
+
+
+.feature-btn {
+  margin: auto;
+  margin-right: 0;
+  margin-top: -40px;
+}
+
+.feature-btn:hover {
+  background-color: #2f3fa0;
+}
+@media (max-width: 480px) {
+  .feature-btn {
+    margin-top: 5px;
+  }
+}

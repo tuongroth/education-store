@@ -1,0 +1,181 @@
+header {
+  width: 100%;
+  overflow: hidden;
+}
+
+.header-container {
+  max-width: 1880px !important;
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 180px 0;
+}
+
+.header-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header-wrapper {
+  display: grid;
+  grid-template-columns: auto 395px;
+  align-items: center;
+  gap: 160px;
+  margin: 0 auto;
+  height: 100% !important;
+  width: 90% !important;
+}
+
+
+
+.header-left p {
+  margin-top: 20px;
+  margin-bottom: 75px;
+}
+.slider-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+}
+.slidebutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--color-dark);
+  border-radius: 50%;
+  padding: 20px;
+  border: 1px solid var(--color-dark-Ex);
+  z-index: 10;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.slidebutton:hover {
+  background: var(--color-dark-Ex);
+  
+}
+
+.swiper-pagination {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 20px !important;
+  margin-top: 100px;
+  margin-bottom: 2px;
+  width: fit-content !important;
+  left: 0;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-primary, #007bff) !important;
+  position: relative !important;
+}
+
+.swiper-pagination-bullet-active::after {
+  content: '';
+  position: absolute !important;
+  height: 1.6rem;
+  width: 1.6rem;
+  border: 1px solid var(--color-primary, #007bff) !important;
+  border-radius: 50%;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: -130%;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+/* Giới hạn max-width cho header-wrapper và điều chỉnh gap */
+@media (max-width: 1256px) {
+  .header-wrapper {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .header-wrapper {
+    gap: 40px; /* bạn có thể chỉnh sửa giá trị này */
+  }
+}
+
+/* Khi màn hình nhỏ hơn 1080px */
+@media (max-width: 1080px) {
+  .header-wrapper {
+    grid-template-columns: auto 340px; /* Thu nhỏ cột phải */
+  }
+}
+
+/* Khi màn hình nhỏ hơn 1020px */
+@media (max-width: 1020px) {
+  .header-container {
+    width: 97%;
+    padding: 100px 0;
+  }
+
+  .header-wrapper {
+    width: 92%;
+    grid-template-columns: 1fr; /* Chuyển layout thành 1 cột */
+    text-align: center;
+  }
+
+  .header-right {
+    grid-row: 1; /* Đưa phần hình ảnh lên trên hoặc xuống dưới */
+    margin: 0 auto;
+    width: 64%;
+  }
+}
+.header-left p {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+/* Nếu bạn muốn style button trong .header-left */
+.header-left .btn {
+  margin: auto;
+}
+
+/* Pagination bullets căn giữa */
+.swiper-pagination {
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 5px;
+}
+
+/* Style nút điều hướng slide */
+.slidebutton {
+  padding: 16px;
+  /* Bạn có thể thêm style khác như màu sắc, border, cursor */
+}
+
+/* Responsive cho màn hình nhỏ dưới 600px */
+@media (max-width: 600px) {
+  .header-right {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .slidebutton {
+    padding: 14px;
+    top: -26%; /* Nếu muốn dịch nút lên trên */
+    /* Có thể thêm position nếu cần */
+    position: relative; /* Hoặc absolute tùy trường hợp */
+  }
+
+  .slider-button {
+    /* Bạn có thể thêm style căn chỉnh cho container nút slide */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,33 @@
+.Brands {
+  padding: 20px 0;
+  background: var(--color-bg-2);
+}
+
+.brands-container {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  align-items: center;
+  gap: 100px;
+}
+
+.brand img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Desktop and tablet styles */
+@media (max-width: 1024px) {
+  .brands-container {
+    gap: 25px; /* Adjusted for medium screens */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .brands-container {
+    gap: 15px;
+    flex-direction: column; /* Optional: stack vertically on small screens */
+    align-items: center;
+  }
+}

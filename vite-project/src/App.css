@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Plus+Jakarta+Sans:wght@200..800&family=Prata&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-weight: 400;
+}
+:root {
+  --color-primary: rgb(189,61,38);
+  --color-black: #111111;
+  --color-black-Ex: #222222;
+  --color-dark: #7A7A7A;
+  --color-dark-Ex: #E5E3DA;
+  --color-light: #EFEEE8;
+  --color-bg-1: #F3F2EC;
+  --color-bg-2: #EDEBE4;
+
+  --font-family-prata: 'Prata', serif;
+  --font-family-jakarta: 'Plus Jakarta Sans', sans-serif;
+
+  --transition: 0.4s ease;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  color: var(--color-dark);
+  font-family: var(--font-family-Jakarta);
+  overflow-x: hidden;
+  background: var(--color-bg-1);
+}
+
+body {
+  background: var(--color-bg-1);
+  overflow-x: hidden;
+}
+
+/* Headings styles */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-family-prata);
+  text-transform: capitalize;
+  margin: 0; /* Reset default margin */
+}
+
+h1 {
+  font-size: 73px;
+  
+  color: var(--color-black-Ex);
+}
+
+h2 {
+  font-size: 48px;
+  line-height: normal;
+  color: var(--color-black);
+}
+
+h3 {
+  font-size: 28px;
+  line-height: normal;
+  color: var(--color-black);
+}
+
+h3-ex, .h3-ex {
+  font-size: 26px !important;
+  color: var(--color-black);
+}
+
+h4 {
+  font-size: 22px;
+  line-height: normal;
+  color: var(--color-black);
+}
+
+h5 {
+  font-size: 17px;
+  color: var(--color-dark);
+}
+
+h5 span {
+  font-size: 18px;
+  color: var(--color-primary);
+}
+
+/* Paragraph styles */
+p {
+  font-size: 16px;
+  line-height: 220%;
+  letter-spacing: 0.04em; /* Assuming 4% means 0.04em */
+  color: var(--color-black);
+}
+
+small {
+  font-size: 13px;
+  letter-spacing: 0.16em; /* Assuming 16% means 0.16em */
+  color: var(--color-dark);
+}
+
+
+:root {
+  --color-black-Ex: #000000; /* example fallback */
+  --transition: all 0.3s ease;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  color: var(--color-black-Ex);
+  background: transparent;
+  position: relative;
+  transition: var(--transition);
+  cursor: pointer;
+  overflow: hidden;
+  
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent; 
+  z-index: -1;
+  transition: var(--transition);
+}
+.btn.active {
+  background-color: black !important;
+  color: white !important;
+}
+
+button {
+  background: transparent;
+  border: none;
+  
+}
+.btn:hover::after {
+  width: 100%;
+}
+
+/* Change text color on hover */
+.btn:hover {
+  color: var(--color-bg-1);
+}
+
+/* Buttons */
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-border{
+  border:1px solid var(--color-black-Ex);
+}
+/* Images */
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Sections */
+section {
+  padding: 180px 0 !important;
+}
+
+/* Container Utility Class */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1420px;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 60px !important;
+  }
+
+  h2 {
+    font-size: 38px !important;
+  }
+
+  h3 {
+    font-size: 26px !important;
+  }
+
+  h4 {
+    font-size: 26px !important;
+  }
+  
+  h5 span {
+    font-size: 16px !important;
+  }
+
+  section {
+    padding: 100px 0 !important;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px !important;
+  }
+
+  h2 {
+    font-size: 34px !important;
+  }
+
+  h3 {
+    font-size: 24px !important;
+  }
+
+  h4 {
+    font-size: 20px !important;
+  }
+
+  section {
+    padding: 70px 0 !important;
+  }
+}

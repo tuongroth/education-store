@@ -1,0 +1,138 @@
+nav {
+  height: 100px;
+  display: grid;
+  place-items: center;
+  position: sticky;
+  top: 0;
+  background: var(--color-bg-1);
+  z-index: 100;
+  border: 1px solid var(--color-dark-Ex);
+}
+
+.navShadow{
+  box-shadow: 0 0 4rem rgba(0, 0, 0, 0.2);
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container .logo {
+  width: 60px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  perspective: 400px;
+}
+
+.nav-links li {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transform: rotateY(-90deg);
+  animation: navAni 600ms ease forwards;
+}
+
+.nav-links a {
+  color: var(--color-dark);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.nav-links .active {
+  color: tomato;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: var(--color-dark);
+  font-size: 17px;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* KEYFRAMES */
+@keyframes navAni {
+  to {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+/* ANIMATION DELAYS */
+.nav-links li:nth-child(1) { animation-delay: 0ms; }
+.nav-links li:nth-child(2) { animation-delay: 200ms; }
+.nav-links li:nth-child(3) { animation-delay: 400ms; }
+.nav-links li:nth-child(4) { animation-delay: 600ms; }
+.nav-links li:nth-child(5) { animation-delay: 800ms; }
+.nav-links li:nth-child(6) { animation-delay: 1000ms; }
+.nav-links li:nth-child(7) { animation-delay: 1200ms; }
+
+/* -------------------------------------- */
+/* RESPONSIVE – Mobile / Tablet (<=1024px) */
+/* -------------------------------------- */
+@media (max-width: 1024px) {
+
+  nav {
+    height: 90px;
+  }
+
+  .nav-container {
+    position: relative;
+    height: 100%;
+  }
+
+  .nav-container .logo {
+    width: 50px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    width: 20rem;
+    top: 90px;
+    right: 0;
+    position: fixed;
+    transition: var(--transition);
+    perspective: 400px;
+  }
+
+  .nav-links a {
+    background: var(--color-bg-1);
+    height: 80px;
+    width: 100%;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: -1rem 5rem 5rem rgba(0, 0, 0, 0.4);
+  }
+
+  .menu-button {
+    display: inline-block;
+    color: var(--color-dark);
+    font-size: 18px;
+  }
+
+  .navLinksShow {
+    display: flex;
+  }
+
+  .navLinksHide {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links{
+    width: 18rem;
+  }
+}
